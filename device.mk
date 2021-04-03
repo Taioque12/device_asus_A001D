@@ -172,31 +172,27 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 
 # Display
 PRODUCT_PACKAGES += \
-    gralloc.msm8953 \
     copybit.msm8953 \
-    hwcomposer.msm8953 \
-    memtrack.msm8953 \
-    liboverlay \
-    libtinyxml \
-    libgenlock \
-    libdisplayconfig \
-    libqdMetaData.system
-
-PRODUCT_PACKAGES += \
+    gralloc.msm8953 \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.mapper@2.0-impl \
     android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.composer@2.1-service \
+    android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
+    android.hardware.configstore@1.0-service \
+    hwcomposer.msm8953 \
+    memtrack.msm8953 \
+    libgenlock \
+    libtinyxml \
+    libdisplayconfig \
+    libqdMetaData.system \
+    libcutils_shim \
+
+PRODUCT_PACKAGES += \
     vendor.display.config@1.0 \
     vendor.display.config@1.0_vendor
-
-# Display Calibrators
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/display/qdcm_calib_data_ili9881h_720p_video_mode_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_ili9881h_720p_video_mode_dsi_panel.xml \
-    $(LOCAL_PATH)/configs/display/qdcm_calib_data_inx6301_720p_video_mode_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_inx6301_720p_video_mode_dsi_panel.xml
 
 # DRM
 PRODUCT_PACKAGES += \
