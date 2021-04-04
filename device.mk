@@ -171,23 +171,22 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 
 # Display
 PRODUCT_PACKAGES += \
-    copybit.msm8953 \
-    gralloc.msm8953 \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.composer@2.1-service \
-    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.graphics.mapper@2.0-impl-2.1 \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    android.hardware.configstore@1.0-service \
+    copybit.msm8953 \
+    gralloc.msm8953 \
     hwcomposer.msm8953 \
     memtrack.msm8953 \
-    libgenlock \
-    libtinyxml \
     libdisplayconfig \
+    liboverlay \
     libqdMetaData.system \
-    libcutils_shim \
+    libgenlock \
+    libtinyxml
 
 PRODUCT_PACKAGES += \
     vendor.display.config@1.0 \
