@@ -153,7 +153,6 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8953 \
     libfui \
     libui_shim \
     Snap \
