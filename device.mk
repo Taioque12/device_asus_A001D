@@ -159,8 +159,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
     camera.msm8953 \
     Snap \
-    camera.device@3.2-impl \
-    vendor.qti.hardware.camera.device@1.0
 
 # Component overrides
 PRODUCT_COPY_FILES += \
