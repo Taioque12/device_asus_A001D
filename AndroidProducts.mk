@@ -15,3 +15,8 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/fluid_A001D.mk
+
+COMMON_LUNCH_CHOICES := \
+    fluid_A001D-user \
+    fluid_A001D-userdebug \
+    fluid_A001D-eng
