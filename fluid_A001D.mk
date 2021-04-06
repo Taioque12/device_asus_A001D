@@ -21,18 +21,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from A001D device
 $(call inherit-product, device/asus/A001D/device.mk)
 
- Inherit some common Lineage stuff
+# Inherit some common Fluid stuff.
 $(call inherit-product, vendor/fluid/config/common_full_phone.mk)
 
-# Inherit from A001D device
-$(call inherit-product, device/asus/A001D/device.mk)
-
-# Gapps Flag
-TARGET_GAPPS_ARCH := arm64
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_INCLUDE_STOCK_ARCORE := true
-IS_PHONE := true
+TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_GAPPS := true
+TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_INCLUDE_GOOGLE_RECORDER := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := tru
 
 #Fluid AboutPhone
 PRODUCT_PRODUCT_PROPERTIES += \
