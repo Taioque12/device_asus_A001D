@@ -21,15 +21,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from A001D device
 $(call inherit-product, device/asus/A001D/device.mk)
 
-# Inherit common Pixelexperience stuff.
-$(call inherit-product, vendor/aosp/config/common.mk)
-TARGET_BOOT_ANIMATION_RES := 720
-TARGET_GAPPS_ARCH := arm64
-
-# Pixel customization
-TARGET_INCLUDE_STOCK_ARCORE := false
-TARGET_INCLUDE_LIVE_WALLPAPERS := false
-
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := A001D
 PRODUCT_NAME := aosp_A001D
