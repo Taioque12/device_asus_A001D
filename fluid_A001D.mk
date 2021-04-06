@@ -31,7 +31,7 @@ $(call inherit-product, vendor/fluid/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := A001D
-PRODUCT_NAME := aosp_A001D
+PRODUCT_NAME := fluid_A001D
 BOARD_VENDOR := asus
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := ASUS_A001D
@@ -39,7 +39,7 @@ PRODUCT_MODEL := ASUS_A001D
 # Gapps Flag
 TARGET_GAPPS_ARCH := arm64
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_INCLUDE_STOCK_ARCORE := false
 IS_PHONE := true
 TARGET_INCLUDE_GAPPS := true
 
