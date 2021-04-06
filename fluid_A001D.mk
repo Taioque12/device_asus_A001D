@@ -18,20 +18,21 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from A001D device
+# Inherit from sakura device
 $(call inherit-product, device/asus/A001D/device.mk)
 
-# Inherit some common Fluid stuff.
-$(call inherit-product, vendor/fluid/config/common.mk)
+# Inherit some common FluidOS.
+$(call inherit-product, vendor/fluid/config/common_full_phone.mk)
 
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_INCLUDE_GAPPS := true
+# Gapps Flag
 TARGET_GAPPS_ARCH := arm64
-TARGET_INCLUDE_STOCK_ARCORE := false
-TARGET_INCLUDE_GOOGLE_RECORDER := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_STOCK_ARCORE := true
+IS_PHONE := true
+TARGET_INCLUDE_GAPPS := true
 
-FLUID_BUILD_TYPE := UNOFFICIAL
+# Boot Animation
+TARGET_BOOT_ANIMATION_RES := 1080
 
 #Fluid AboutPhone
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -44,3 +45,6 @@ PRODUCT_NAME := aosp_A001D
 BOARD_VENDOR := asus
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := ASUS_A001D
+
+#Official Fluid
+FLUID_BUILD_TYPE := OFFICIAL
