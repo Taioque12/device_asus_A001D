@@ -208,6 +208,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
+	
+# Fingerprint
+PRODUCT_PACKAGES += \
+    libbacktrace-vendor \
 
 # GPS
 PRODUCT_PACKAGES += \
