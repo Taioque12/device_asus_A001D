@@ -198,7 +198,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     vendor.display.color@1.0-service \
-    vendor.display.color@1.0-impl
 
 # DRM
 PRODUCT_PACKAGES += \
