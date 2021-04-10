@@ -2,7 +2,7 @@ Device Tree for Zenfone Max Shot & Plus M2 (A001D)
 ===========================================
 
 The Motorola Zenfone Max Shot & Plus M2 (codenamed _"A001D"_) is a mid-range smartphone from Asus.
-It was announced on February 2017.
+It was announced on April 2019.
 
 Basic   | Spec Sheet
 -------:|:-------------------------
