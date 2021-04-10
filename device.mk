@@ -166,54 +166,6 @@ PRODUCT_PACKAGES += \
     camera.device@3.2-impl \
     vendor.qti.hardware.camera.device@1.0
 	
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/camera/camera_config.xml
-	$(LOCAL_PATH)/configs/camera/csidtg_camera.xml
-	$(LOCAL_PATH)/configs/camera/csidtg_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/gc5025_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/gc8034_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/imx214_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/imx230_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/imx230_qc2002_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/imx230_qc2002_with_gyro_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/imx258_bear_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/imx258_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/imx258_mono_bear_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/imx258_mono_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/imx298_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/imx298_gt24c64_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/imx318_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/imx362_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/imx362_chromatix_bear.xml
-	$(LOCAL_PATH)/configs/camera/imx378_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/imx486_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/imx486_kelon_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/kelon_gc5025_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/kelon_ov8856_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/ov13850_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/ov13850_q13v06k_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/ov2281_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/ov2680_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/ov4688_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/ov5670_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/ov5670_f5670bq_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/ov5695_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/ov7251_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/ov8856_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/ov8858_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/ov8865_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/s5k2l7_8953_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/s5k2l7_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/s5k3l8_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/s5k3l8_f3l8yam_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/s5k3l8_mono_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/s5k3m2xm_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/s5k3m2xm_chromatix_bear.xml
-	$(LOCAL_PATH)/configs/camera/s5k3m2xx_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/s5k3p3sm_chromatix.xml 
-	$(LOCAL_PATH)/configs/camera/s5k3p8sp_chromatix.xml
-	$(LOCAL_PATH)/configs/camera/s5k4h7yx_chromatix.xml
-
 # Component overrides
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sysconfig/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
