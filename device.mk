@@ -439,7 +439,8 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/android.hardware.graphics.mapper@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.common@3.0.so \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libRSDriver.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libRSDriver.so \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libRSCpuRef.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libRSCpuRef.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidlbase.so  
+    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidlbase.so \
+prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libc++.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++.so
 
 # Whitelisted app
 PRODUCT_COPY_FILES += \
