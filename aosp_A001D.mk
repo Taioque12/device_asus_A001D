@@ -29,9 +29,6 @@ TARGET_INCLUDE_STOCK_ARCORE := false
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-# PixelGApps
-$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
-
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := A001D
 PRODUCT_NAME := aosp_A001D
