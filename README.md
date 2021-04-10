@@ -18,4 +18,4 @@ Display | 1080 x 2280 pixels, 6.2 inches (~402 ppi pixel density)
 Camera  | 12 MP, 4000 x 300 pixels + 5 mb + 8mp (ultrawide) 
 
 
-![Zenfone Max Shot & Plus M2](https://fdn2.gsmarena.com/vv/pics/asus/asus-zenfone-max-shot-2.jpg "Zenfone Max Shot & Plus M2")
+![Zenfone Max Shot & Plus M2](https://fdn2.gsmarena.com/vv/pics/asus/asus-zenfone-max-shot-1.jpg "Zenfone Max Shot & Plus M2")
