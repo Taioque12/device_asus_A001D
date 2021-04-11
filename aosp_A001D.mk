@@ -35,9 +35,3 @@ PRODUCT_NAME := aosp_A001D
 BOARD_VENDOR := asus
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := ASUS_A001D
-
-# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := asus/WW_Phone/ASUS_A001D_2:9/PPR1/16.14.1906.239-20190713:user/release-keys
-
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.build.fingerprint=$(BUILD_FINGERPRINT)
