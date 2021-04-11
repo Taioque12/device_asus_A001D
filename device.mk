@@ -225,6 +225,7 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     libbacktrace-vendor \
+	libunwind
 
 # GPS
 PRODUCT_PACKAGES += \
