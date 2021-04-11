@@ -426,6 +426,7 @@ PRODUCT_PACKAGES += \
 	
 # VNDK
 PRODUCT_PACKAGES += \
+	vndk-sp \
     vndk_package \
     libdng_sdk.vendor \
     libstdc++.vendor
@@ -438,12 +439,6 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-lite.so \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-full.so \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-lite.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libRSDriver.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libRSDriver.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libRSDriver.so:$(TARGET_COPY_OUT_VENDOR)/lib/libRSDriver.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libRSCpuRef.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libRSCpuRef.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libRSCpuRef.so:$(TARGET_COPY_OUT_VENDOR)/lib/libRSCpuRef.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidlbase.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase.so
 
 # Whitelisted app
 PRODUCT_COPY_FILES += \
