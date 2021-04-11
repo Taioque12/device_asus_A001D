@@ -186,12 +186,19 @@ PRODUCT_PACKAGES += \
     gralloc.msm8953 \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.allocator@3.0-impl \
+    android.hardware.graphics.allocator@4.0-impl \
     android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.composer@2.1-service \
-    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.graphics.composer@2.4-impl \
+    android.hardware.graphics.composer@2.4-service \
+    android.hardware.graphics.mapper@2.0-impl-2.1 \
+    android.hardware.graphics.mapper@3.0-impl-qti-display \
+    android.hardware.graphics.mapper@4.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    android.hardware.configstore@1.0-service \
+	vendor.qti.hardware.display.allocator-service \
+    vendor.qti.hardware.display.mapper@2.0.vendor
     hwcomposer.msm8953 \
     memtrack.msm8953 \
     libgenlock \
@@ -431,21 +438,7 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-lite.so \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-full.so \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-lite.so \
-    prebuilts/vndk/v28/arm64/arch-arm64-armv8-a/shared/vndk-core/android.hardware.graphics.allocator@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.allocator@2.0.so \
-    prebuilts/vndk/v28/arm64/arch-arm64-armv8-a/shared/vndk-core/android.hardware.graphics.allocator@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.graphics.allocator@2.0.so \  
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/android.hardware.graphics.common@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.common@1.0.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/android.hardware.graphics.common@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.common@1.1.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/android.hardware.graphics.common@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.common@1.2.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/android.hardware.graphics.mapper@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.mapper@2.0.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/android.hardware.graphics.mapper@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.mapper@2.1.so \ 
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/android.hardware.graphics.mapper@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.graphics.mapper@3.0.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/android.hardware.graphics.mapper@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.graphics.mapper@3.0.so \
-	prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/android.hardware.graphics.common@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.graphics.common@1.0.so \
-	prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/android.hardware.graphics.mapper@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.graphics.mapper@2.0.so \
-	prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/android.hardware.graphics.mapper@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.graphics.mapper@2.1.so \  
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/android.hardware.graphics.common@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.graphics.common@1.2.so \
-	prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/android.hardware.graphics.common@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.graphics.common@1.1.so \
-	prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libRSDriver.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libRSDriver.so \
+    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libRSDriver.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libRSDriver.so \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libRSDriver.so:$(TARGET_COPY_OUT_VENDOR)/lib/libRSDriver.so \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libRSCpuRef.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libRSCpuRef.so \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libRSCpuRef.so:$(TARGET_COPY_OUT_VENDOR)/lib/libRSCpuRef.so \
