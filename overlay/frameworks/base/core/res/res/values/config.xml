@@ -495,7 +495,7 @@
     <bool name="config_swipe_up_gesture_default">true</bool>
 
     <!-- Height of the status bar -->
-    <dimen name="status_bar_height_portrait">94.0px</dimen>
+    <dimen name="status_bar_height_portrait">81.0px</dimen>
     <dimen name="status_bar_height_landscape">24.0dp</dimen>
 
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
