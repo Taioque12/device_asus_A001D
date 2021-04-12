@@ -13,7 +13,7 @@ Memory  | 4 GB RAM
 Shipped Android Version | 8.1.0
 Storage | 32 GB
 MicroSD | Up to 256 GB
-Battery | Li-Ion 3000mAh battery
+Battery | Li-Ion 4000mAh battery
 Display | 1080 x 2280 pixels, 6.2 inches (~402 ppi pixel density)
 Camera  | 12 MP, 4000 x 300 pixels + 5 mb + 8mp (ultrawide) 
 
