@@ -100,8 +100,13 @@ BLUETOOTH_HCI_USE_MCT := true
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_USES_QTI_CAMERA_DEVICE := true
-BOARD_QTI_CAMERA_32BIT_ONLY := true
-TARGET_TS_MAKEUP := true
+
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    /vendor/lib/hw/camera.msm8953.so|camera_shims.so \
+	
+# Cpusets
+ENABLE_CPUSETS := true
 
 # Config
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
