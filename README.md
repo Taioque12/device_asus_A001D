@@ -9,9 +9,9 @@ Basic   | Spec Sheet
 CPU     | Octa-core 1,8 GHz Cortex-A53
 Chipset | Qualcomm MSM8953 Snapdragon 625
 GPU     | Adreno 506
-Memory  | 4 GB RAM
+Memory  | 3 and 4 GB RAM
 Shipped Android Version | 8.1.0
-Storage | 32 GB
+Storage | 32 GB and 64 GB
 MicroSD | Up to 256 GB
 Battery | Li-Ion 4000mAh battery
 Display | 1080 x 2280 pixels, 6.2 inches (~402 ppi pixel density)
