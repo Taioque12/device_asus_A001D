@@ -25,79 +25,84 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <cstdlib>
-#include <fstream>
-#include <string.h>
-#include <sys/sysinfo.h>
-#include <unistd.h>
-
-#include <android-base/logging.h>
 #include <android-base/properties.h>
+
+#include <sys/sysinfo.h>
+
+#include <stdlib.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
-#include "property_service.h"
 #include "vendor_init.h"
+#include "property_service.h"
+#include "log/log.h"
+
+char const *heaptargetutilization;
+char const *heapminfree;
+char const *heapmaxfree;
+
+void check_device()
+{
+    struct sysinfo sys;
+
+    sysinfo(&sys);
+
+    if (sys.totalram > 2048ull * 1024 * 1024) {
+        // from phone-xhdpi-4096-dalvik-heap.mk
+        heaptargetutilization = "0.6";
+        heapminfree = "8m";
+        heapmaxfree = "16m";
+    } else {
+        // from phone-xhdpi-2048-dalvik-heap.mk
+        heaptargetutilization = "0.75";
+        heapminfree = "512k";
+        heapmaxfree = "8m";
+    }
+}
 
 void property_override(char const prop[], char const value[])
 {
-	prop_info *pi;
-	pi = (prop_info *)__system_property_find(prop);
-	if (pi)
-		__system_property_update(pi, value, strlen(value));
-	else
-		__system_property_add(prop, strlen(prop), value, strlen(value));
+    prop_info *pi;
+    pi = (prop_info*) __system_property_find(prop);
+    if (pi)
+        __system_property_update(pi, value, strlen(value));
+    else
+        __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
-void property_override_multifp(char const buildfp[], char const systemfp[],
-	char const bootimagefp[], char const vendorfp[], char const value[])
+void property_override_triple(char const product_prop[], char const system_prop[], char const vendor_prop[],
+    char const value[])
 {
-    property_override(buildfp, value);
-    property_override(systemfp, value);
-    property_override(vendorfp, value);
-    property_override(bootimagefp, value);
+    property_override(product_prop, value);
+    property_override(system_prop, value);
+    property_override(vendor_prop, value);
 }
 
-void load_dalvik_properties()
-{
-	struct sysinfo sys;
+void set_avoid_gfxaccel_config() {
+    struct sysinfo sys;
+    sysinfo(&sys);
 
-	sysinfo(&sys);
-
-	if (sys.totalram > 3072ull * 1024 * 1024)
-	{
-		// from - phone-xxhdpi-4096-dalvik-heap.mk
-		property_override("dalvik.vm.heapstartsize", "8m");
-		property_override("dalvik.vm.heaptargetutilization", "0.6");
-		property_override("dalvik.vm.heapgrowthlimit", "256m");
-		property_override("dalvik.vm.heapsize", "512m");
-		property_override("dalvik.vm.heapmaxfree", "16m");
-		property_override("dalvik.vm.heapminfree", "8m");
-	}
-	else
-	{
-                // from - phone-xhdpi-2048-dalvik-heap.mk
-		property_override("dalvik.vm.heapstartsize", "8m");
-		property_override("dalvik.vm.heaptargetutilization", "0.7");
-		property_override("dalvik.vm.heapgrowthlimit", "192m");
-		property_override("dalvik.vm.heapsize", "512m");
-		property_override("dalvik.vm.heapmaxfree", "8m");
-		property_override("dalvik.vm.heapminfree", "512k");
-	}
+    if (sys.totalram <= 3072ull * 1024 * 1024) {
+        // Reduce memory footprint
+        property_override("ro.config.avoid_gfx_accel", "true");
+    }
 }
 
 void vendor_load_properties()
 {
-	load_dalvik_properties();
+    check_device();
+    set_avoid_gfxaccel_config();
 
-	// fingerprint
-	property_override("ro.build.description", "redfin-user 11 RQ2A.210305.006 7119741 release-keys");
-	property_override_multifp("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.vendor.build.fingerprint", "ro.bootimage.build.fingerprint", "asus/WW_Phone/ASUS_A001D_2:9/PPR1/16.14.1906.239-20190713:user/release-keys");
-	
-	// Magisk Hide
-	property_override("ro.boot.verifiedbootstate", "green");
-	property_override("ro.boot.vbmeta.device_state", "locked");
-	property_override("ro.boot.veritymode", "enforcing");
-	property_override("ro.build.type", "user");
-	property_override("ro.build.tags", "release-keys");
+    property_override("dalvik.vm.heapstartsize", "8m");
+    property_override("dalvik.vm.heapgrowthlimit", "192m");
+    property_override("dalvik.vm.heapsize", "512m");
+    property_override("dalvik.vm.heaptargetutilization", heaptargetutilization);
+    property_override("dalvik.vm.heapminfree", heapminfree);
+    property_override("dalvik.vm.heapmaxfree", heapmaxfree);
+
+    property_override("ro.product.model", "Redmi 5");
+    property_override("ro.build.product", "rosy");
+    property_override("ro.product.device", "rosy");
+    property_override("ro.build.description", "redfin-user 11 RQ2A.210305.006 7119741 release-keys");
+    property_override_triple("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.vendor.build.fingerprint", "google/redfin/redfin:11/RQ2A.210305.006/7119741:user/release-keys");
 }
